@@ -69,7 +69,7 @@ extension TestViewModel {
     }
     
     private func currentUserId() -> AnyPublisher<UserId, FirebaseTestError> {
-        return userService.currentUser()
+        return userService.currentUserPublisher()
             .flatMap { user -> AnyPublisher<UserId, FirebaseTestError> in
                 if let userId = user?.uid {
                     return Just(userId)

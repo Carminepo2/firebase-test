@@ -18,6 +18,8 @@
 		753E602F280C913600BACDCB /* TestItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E602E280C913600BACDCB /* TestItemViewModel.swift */; };
 		753E6031280CA7FB00BACDCB /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6030280CA7FA00BACDCB /* TabContainerView.swift */; };
 		753E6034280CB34D00BACDCB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6033280CB34D00BACDCB /* Color+Extension.swift */; };
+		753E6037280D551700BACDCB /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6036280D551700BACDCB /* LoginSignupViewModel.swift */; };
+		753E6039280D556100BACDCB /* LoginSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6038280D556100BACDCB /* LoginSignupView.swift */; };
 		7550C652280956EC005C8E77 /* FirebaseTestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550C651280956EC005C8E77 /* FirebaseTestError.swift */; };
 		75C7477128080DB9007B5ADE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 75C7477028080DB9007B5ADE /* FirebaseAuth */; };
 		75C7477328080DB9007B5ADE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 75C7477228080DB9007B5ADE /* FirebaseAuthCombine-Community */; };
@@ -44,6 +46,8 @@
 		753E602E280C913600BACDCB /* TestItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestItemViewModel.swift; sourceTree = "<group>"; };
 		753E6030280CA7FA00BACDCB /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 		753E6033280CB34D00BACDCB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		753E6036280D551700BACDCB /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
+		753E6038280D556100BACDCB /* LoginSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupView.swift; sourceTree = "<group>"; };
 		7550C651280956EC005C8E77 /* FirebaseTestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestError.swift; sourceTree = "<group>"; };
 		75C7477B28082435007B5ADE /* AuthPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPublisher.swift; sourceTree = "<group>"; };
 		75C7477E28082C5A007B5ADE /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				75C7478028082CBE007B5ADE /* Services */,
 				75C7477A28082426007B5ADE /* Publishers */,
 				753E6035280CB36E00BACDCB /* Errors */,
+				753E603A280D57E500BACDCB /* Modifiers */,
 				753E6032280CB33700BACDCB /* Extensions */,
 				75334FA32807FC0C007BFDF2 /* Assets.xcassets */,
 				75334FA52807FC0C007BFDF2 /* Preview Content */,
@@ -116,6 +121,7 @@
 				75334FA12807FC0B007BFDF2 /* CreateListView.swift */,
 				753E6027280C7F6200BACDCB /* TestListView.swift */,
 				753E6030280CA7FA00BACDCB /* TabContainerView.swift */,
+				753E6038280D556100BACDCB /* LoginSignupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +142,13 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		753E603A280D57E500BACDCB /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		75C7477A28082426007B5ADE /* Publishers */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 				75C7477E28082C5A007B5ADE /* TestViewModel.swift */,
 				753E6029280C7FCD00BACDCB /* TestListViewModel.swift */,
 				753E602E280C913600BACDCB /* TestItemViewModel.swift */,
+				753E6036280D551700BACDCB /* LoginSignupViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -254,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				753E602A280C7FCD00BACDCB /* TestListViewModel.swift in Sources */,
+				753E6037280D551700BACDCB /* LoginSignupViewModel.swift in Sources */,
 				753E6034280CB34D00BACDCB /* Color+Extension.swift in Sources */,
 				75334FA22807FC0B007BFDF2 /* CreateListView.swift in Sources */,
+				753E6039280D556100BACDCB /* LoginSignupView.swift in Sources */,
 				75C7478228082CCD007B5ADE /* UserService.swift in Sources */,
 				753E602D280C80AE00BACDCB /* QuerySnapshotPublisher.swift in Sources */,
 				75C7477C28082435007B5ADE /* AuthPublisher.swift in Sources */,

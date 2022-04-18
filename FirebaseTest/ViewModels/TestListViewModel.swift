@@ -38,7 +38,7 @@ final class TestListViewModel: ObservableObject {
     
     private func observeTests() {
         isLoading = true
-        userService.currentUser()
+        userService.currentUserPublisher()
             .compactMap { $0?.uid }
             .flatMap { [weak self] userId -> AnyPublisher<[Test], FirebaseTestError> in
                 guard let self = self else { return Fail(error: .default()).eraseToAnyPublisher() }
