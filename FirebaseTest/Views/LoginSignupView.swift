@@ -8,7 +8,15 @@
 import SwiftUI
 
 struct LoginSignupView: View {
-    @ObservedObject private var viewModel: LoginSignupViewModel
+    @StateObject private var viewModel: LoginSignupViewModel
+    @Binding var isPushed: Bool
+    
+    init(mode: LoginSignupViewModel.Mode, isPushed: Binding<Bool>) {
+        self._viewModel = .init(
+            wrappedValue: LoginSignupViewModel(mode: mode)
+        )
+        self._isPushed = isPushed
+    }
     
     var emailTextField: some View {
         TextField(viewModel.emailPlaceholderText, text: $viewModel.emailText)
@@ -37,6 +45,9 @@ struct LoginSignupView: View {
             passwordTextField
             actionButton
             
+        }
+        .onReceive(viewModel.$isPushed) { isPushed in
+            self.isPushed = isPushed
         }
     }
     

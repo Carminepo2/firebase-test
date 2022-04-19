@@ -29,8 +29,8 @@ struct TestListView: View {
     
     var mainContentView: some View {
         List {
-            ForEach(viewModel.itemsViewModels, id: \.self) { viewModel in
-                Text("\(viewModel.number)")
+            ForEach(viewModel.itemsViewModels) { viewModel in
+                TestItemView(viewModel: viewModel)
             }
         }
     }

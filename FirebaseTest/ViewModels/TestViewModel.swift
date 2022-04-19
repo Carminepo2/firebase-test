@@ -52,7 +52,7 @@ final class TestViewModel: ObservableObject {
                 } receiveValue: { _ in
                     print("Success")
                 }.store(in: &cancellables)
-
+            
         }
     }
 }
@@ -65,7 +65,13 @@ extension TestViewModel {
     private func createTest(userId: UserId) -> AnyPublisher<Void, FirebaseTestError> {
         // Insert validation here
         // guard let .... else {  return Fail(error: .default("Parsing error")).eraseToAnyPublisher()   }
-        return testService.create(.init(userId: userId, number: Int.random(in: 1...10))).eraseToAnyPublisher()
+        return testService.create(
+            .init(
+                userId: userId,
+                number: Int.random(in: 1...10),
+                created: Date()
+            )
+        ).eraseToAnyPublisher()
     }
     
     private func currentUserId() -> AnyPublisher<UserId, FirebaseTestError> {

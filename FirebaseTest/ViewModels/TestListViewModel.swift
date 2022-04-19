@@ -58,7 +58,25 @@ final class TestListViewModel: ObservableObject {
                 guard let self = self else { return }
                 self.isLoading = false
                 self.error = nil
-                self.itemsViewModels = tests.map { .init($0) }
+                self.itemsViewModels = tests.map {
+                    .init($0) { [weak self] id in
+                        self?.deleteTest(id)
+                    }
+                }
+            }.store(in: &cancellables)
+    }
+    
+    private func deleteTest(_ testId: String) {
+        testService.delete(testId)
+            .sink { [weak self] completion in
+                guard let self = self else { return }
+                switch(completion) {
+                case let .failure(error):
+                    self.error = error
+                case .finished: break
+                }
+            } receiveValue: { _ in
+                self.error = nil
             }
             .store(in: &cancellables)
     }

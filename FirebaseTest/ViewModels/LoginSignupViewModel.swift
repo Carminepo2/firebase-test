@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 import Combine
 
 final class LoginSignupViewModel: ObservableObject {
@@ -14,7 +13,7 @@ final class LoginSignupViewModel: ObservableObject {
     @Published var emailText: String = ""
     @Published var passwordText: String = ""
     @Published var isValid: Bool = false
-    @Binding var isPushed: Bool
+    @Published var isPushed = true
     
     private(set) var emailPlaceholderText = "Email"
     private(set) var passwordPlaceholderText = "Password"
@@ -25,12 +24,10 @@ final class LoginSignupViewModel: ObservableObject {
     
     init(
         mode: Mode,
-        userService: UserServiceProtocol = UserService(),
-        isPushed: Binding<Bool>
+        userService: UserServiceProtocol = UserService()
     ) {
         self.mode = mode
         self.userService = userService
-        self._isPushed = isPushed
         
         Publishers.CombineLatest($emailText, $passwordText)
             .map { [weak self] email, password in

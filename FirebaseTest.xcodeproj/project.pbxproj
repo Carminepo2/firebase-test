@@ -20,6 +20,7 @@
 		753E6034280CB34D00BACDCB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6033280CB34D00BACDCB /* Color+Extension.swift */; };
 		753E6037280D551700BACDCB /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6036280D551700BACDCB /* LoginSignupViewModel.swift */; };
 		753E6039280D556100BACDCB /* LoginSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E6038280D556100BACDCB /* LoginSignupView.swift */; };
+		753E603E280EBDF500BACDCB /* TestItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753E603D280EBDF500BACDCB /* TestItemView.swift */; };
 		7550C652280956EC005C8E77 /* FirebaseTestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7550C651280956EC005C8E77 /* FirebaseTestError.swift */; };
 		75C7477128080DB9007B5ADE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 75C7477028080DB9007B5ADE /* FirebaseAuth */; };
 		75C7477328080DB9007B5ADE /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 75C7477228080DB9007B5ADE /* FirebaseAuthCombine-Community */; };
@@ -48,6 +49,7 @@
 		753E6033280CB34D00BACDCB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		753E6036280D551700BACDCB /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		753E6038280D556100BACDCB /* LoginSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupView.swift; sourceTree = "<group>"; };
+		753E603D280EBDF500BACDCB /* TestItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestItemView.swift; sourceTree = "<group>"; };
 		7550C651280956EC005C8E77 /* FirebaseTestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTestError.swift; sourceTree = "<group>"; };
 		75C7477B28082435007B5ADE /* AuthPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPublisher.swift; sourceTree = "<group>"; };
 		75C7477E28082C5A007B5ADE /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				753E6027280C7F6200BACDCB /* TestListView.swift */,
 				753E6030280CA7FA00BACDCB /* TabContainerView.swift */,
 				753E6038280D556100BACDCB /* LoginSignupView.swift */,
+				753E603D280EBDF500BACDCB /* TestItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				7550C652280956EC005C8E77 /* FirebaseTestError.swift in Sources */,
 				753E6031280CA7FB00BACDCB /* TabContainerView.swift in Sources */,
 				753E6028280C7F6200BACDCB /* TestListView.swift in Sources */,
+				753E603E280EBDF500BACDCB /* TestItemView.swift in Sources */,
 				75334FA02807FC0B007BFDF2 /* FirebaseTestApp.swift in Sources */,
 				75C74785280831A1007B5ADE /* Test.swift in Sources */,
 			);

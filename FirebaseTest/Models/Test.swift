@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
-struct Test: Codable, Hashable {
+struct Test: Codable, Identifiable {
+    @DocumentID var id: String?
     let userId: String
     let number: Int
+    let created: Date
 }
